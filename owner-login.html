@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Login | ShareBite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header page-header">
+    <a class="brand" href="index.html" aria-label="ShareBite home"><span class="brand-mark">SB</span><span>ShareBite</span></a>
+    <button class="menu-toggle" type="button" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span>Menu</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="owner.html">Owner dashboard</a>
+      <a href="supplier.html">Supplier approval</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">Owner portal</p>
+      <h1>Owner login</h1>
+      <p>Login to view platform activity and send full data reports to your email.</p>
+    </section>
+
+    <section class="section single-form">
+      <form class="form-panel login-panel" data-login-role="owner" aria-labelledby="owner-login-title">
+        <div class="section-heading inline">
+          <p class="eyebrow">Owner access</p>
+          <h2 id="owner-login-title">Access owner dashboard</h2>
+        </div>
+        <label>Email<input class="login-email" type="email" value="sharebite.in@gmail.com" autocomplete="email" required></label>
+        <label>Password<input class="login-password" type="password" placeholder="Enter owner password" autocomplete="current-password" required></label>
+        <button class="button primary full" type="submit">Login as Owner</button>
+        <p class="form-note login-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer"><span>ShareBite prototype</span><span>Owner login page</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

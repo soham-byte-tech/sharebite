@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Listings | ShareBite</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header page-header">
+    <a class="brand" href="index.html" aria-label="ShareBite home"><span class="brand-mark">SB</span><span>ShareBite</span></a>
+    <button class="menu-toggle" type="button" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span>Menu</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="how.html">How it works</a>
+      <a href="listings.html" aria-current="page">Food listings</a>
+      <a href="ngo-feedback.html">NGO feedback</a>
+      <a href="donate.html">Donate food</a>
+      <a href="supplier.html">Supplier approval</a>
+      <a href="owner.html">Owner dashboard</a>
+      <a href="ngo.html">NGO access</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">For NGOs</p>
+      <h1>Food listings</h1>
+      <p>Browse approved surplus food, filter by price or vegetarian food, and reserve direct pickup.</p>
+    </section>
+
+    <section class="section split" aria-labelledby="listings-title">
+      <div class="listings-panel">
+        <div class="section-heading inline">
+          <p class="eyebrow">Available now</p>
+          <h2 id="listings-title">Surplus food listings</h2>
+        </div>
+        <a class="button dark" href="ngo-feedback.html">Give NGO feedback</a>
+        <div class="app-search" aria-label="Search placeholder">🔎 Search any foods</div>
+        <div class="category-strip" aria-label="Food categories">
+          <span>🛍️<small>All</small></span>
+          <span>🍔<small>Burger</small></span>
+          <span>🥤<small>Drink</small></span>
+          <span>🍤<small>Seafood</small></span>
+          <span>🍱<small>Meals</small></span>
+        </div>
+        <div class="feature-banner">
+          <div>
+            <strong>Urgent Donation this month</strong>
+            <span>Get 50% off today</span>
+          </div>
+          <span class="feature-dish">🍛</span>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filter food listings">
+          <button class="filter active" data-filter="all" type="button" aria-pressed="true">All</button>
+          <button class="filter" data-filter="free" type="button" aria-pressed="false">Free</button>
+          <button class="filter" data-filter="discount" type="button" aria-pressed="false">50% off</button>
+          <button class="filter" data-filter="veg" type="button" aria-pressed="false">Veg</button>
+        </div>
+        <p class="results-note" id="resultsNote" role="status"></p>
+        <div class="listing-grid" id="listingGrid" aria-live="polite"></div>
+        <nav class="bottom-tabs" aria-label="App tabs">
+          <a href="listings.html" aria-current="page">⌂<span>Home</span></a>
+          <a href="ngo-feedback.html">⌖<span>Feedback</span></a>
+          <a href="ngo.html">🔔<span>NGO</span></a>
+          <a href="owner-login.html">⚙<span>Settings</span></a>
+        </nav>
+      </div>
+
+      <aside class="map-panel" aria-label="Pickup readiness checklist">
+        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=80" alt="People sorting donated food packets">
+        <div class="pickup-box">
+          <h3>Pickup checklist</h3>
+          <ul>
+            <li>NGO brings collection containers.</li>
+            <li>Food is packed before pickup time.</li>
+            <li>Donor shares exact gate or kitchen entry.</li>
+            <li>Both sides confirm handover in the app.</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <dialog class="pickup-dialog" id="pickupDialog" aria-labelledby="pickupTitle">
+    <form method="dialog" class="dialog-card">
+      <button class="icon-close" value="cancel" aria-label="Close pickup details" type="submit">x</button>
+      <p class="eyebrow">Pickup reservation</p>
+      <h2 id="pickupTitle">Confirm NGO pickup</h2>
+      <div class="dialog-details" id="pickupDetails"></div>
+      <label>NGO contact name<input id="pickupContact" type="text" value="Asha Sharma" required></label>
+      <label>Pickup notes<textarea id="pickupNotes" rows="3" placeholder="Example: We will bring 4 containers and arrive from the main gate."></textarea></label>
+      <div class="dialog-actions">
+        <button class="button secondary dialog-secondary" value="cancel" type="submit">Cancel</button>
+        <button class="button primary" id="confirmPickup" value="default" type="button">Confirm pickup</button>
+      </div>
+    </form>
+  </dialog>
+
+  <footer class="footer"><span>ShareBite prototype</span><span>Food listings page</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

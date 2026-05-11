@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | ShareBite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header page-header">
+    <a class="brand" href="index.html" aria-label="ShareBite home"><span class="brand-mark">SB</span><span>ShareBite</span></a>
+    <button class="menu-toggle" type="button" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span>Menu</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="ngo-login.html">NGO login</a>
+      <a href="supplier-login.html">Supplier login</a>
+      <a href="owner-login.html">Owner login</a>
+      <a href="signup.html" aria-current="page">Sign up</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">Create account</p>
+      <h1>Sign up</h1>
+      <p>Create a ShareBite account as an NGO or supplier. Owner access stays separate.</p>
+    </section>
+
+    <section class="section single-form">
+      <form class="form-panel login-panel" id="signupForm" aria-labelledby="signup-title">
+        <div class="section-heading inline">
+          <p class="eyebrow">New user</p>
+          <h2 id="signup-title">Create your account</h2>
+        </div>
+        <label>Account type
+          <select id="signupRole" required>
+            <option value="ngo">NGO</option>
+            <option value="supplier">Supplier</option>
+          </select>
+        </label>
+        <label>Full name or organization name
+          <input id="signupName" type="text" placeholder="Enter name or organization" autocomplete="name" required>
+        </label>
+        <label>Email
+          <input id="signupEmail" type="email" placeholder="Enter email" autocomplete="email" required>
+        </label>
+        <label>Password
+          <input id="signupPassword" type="password" placeholder="Create password" autocomplete="new-password" minlength="4" required>
+        </label>
+        <button class="button primary full" type="submit">Create account</button>
+        <p class="form-note" id="signupMessage" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer"><span>ShareBite prototype</span><span>Sign up page</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

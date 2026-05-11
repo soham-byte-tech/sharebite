@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Food | ShareBite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header page-header">
+    <a class="brand" href="index.html" aria-label="ShareBite home"><span class="brand-mark">SB</span><span>ShareBite</span></a>
+    <button class="menu-toggle" type="button" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span>Menu</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="how.html">How it works</a>
+      <a href="listings.html">Food listings</a>
+      <a href="donate.html" aria-current="page">Donate food</a>
+      <a href="supplier.html">Supplier approval</a>
+      <a href="owner.html">Owner dashboard</a>
+      <a href="ngo.html">NGO access</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">For donors</p>
+      <h1>Donate food</h1>
+      <p>Add surplus food from a mess, party, wedding, hotel, restaurant, or caterer. The supplier approves it before an NGO gets the email.</p>
+    </section>
+
+    <section class="section single-form">
+      <form class="form-panel" id="donate" aria-labelledby="donate-title">
+        <div class="section-heading inline">
+          <p class="eyebrow">Create listing</p>
+          <h2 id="donate-title">List surplus food</h2>
+        </div>
+        <label>Donor type
+          <select id="donorType" required>
+            <option>Mess</option>
+            <option>Wedding hall</option>
+            <option>Party organizer</option>
+            <option>Hotel</option>
+            <option>Restaurant</option>
+            <option>Caterer</option>
+          </select>
+        </label>
+        <label>Food details<input id="foodName" type="text" value="Veg biryani and dal" required></label>
+        <div class="form-row">
+          <label>Servings<input id="servings" type="number" min="5" value="80" required></label>
+          <label>Price option
+            <select id="priceType" required>
+              <option value="free">Free</option>
+              <option value="discount">50% off</option>
+            </select>
+          </label>
+        </div>
+        <label>Pickup window<input id="pickupWindow" type="text" value="Today, 8:00 PM - 9:30 PM" required></label>
+        <label>Location<input id="location" type="text" value="Sector 18 community kitchen" required></label>
+        <label>NGO email for approval notice<input id="ngoEmail" type="email" value="ngo@example.com" required></label>
+        <button class="button primary full" type="submit">Submit for supplier approval</button>
+        <p class="form-note" id="donationMessage" role="status"></p>
+        <a class="button dark full" href="supplier.html">Open supplier approval</a>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer"><span>ShareBite prototype</span><span>Donor page</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

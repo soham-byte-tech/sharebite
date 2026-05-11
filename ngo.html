@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Access | ShareBite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header page-header">
+    <a class="brand" href="index.html" aria-label="ShareBite home"><span class="brand-mark">SB</span><span>ShareBite</span></a>
+    <button class="menu-toggle" type="button" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span>Menu</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="how.html">How it works</a>
+      <a href="listings.html">Food listings</a>
+      <a href="donate.html">Donate food</a>
+      <a href="supplier.html">Supplier approval</a>
+      <a href="owner.html">Owner dashboard</a>
+      <a href="ngo.html" aria-current="page">NGO access</a>
+      <a href="ngo-feedback.html">NGO feedback</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">For NGOs</p>
+      <h1>NGO access</h1>
+      <p>Request verification, set your pickup radius, and confirm that your NGO can collect food directly.</p>
+    </section>
+
+    <section class="section single-form">
+      <form class="form-panel ngo-panel" id="ngo" aria-labelledby="ngo-title">
+        <div class="section-heading inline">
+          <p class="eyebrow">Verification</p>
+          <h2 id="ngo-title">Request access</h2>
+        </div>
+        <label>NGO name<input type="text" value="Hope Meals Foundation" required></label>
+        <label>Registration ID<input type="text" value="NGO-2026-4182" required></label>
+        <div class="form-row">
+          <label>Pickup radius
+            <select required>
+              <option>5 km</option>
+              <option>10 km</option>
+              <option>20 km</option>
+            </select>
+          </label>
+          <label>Daily capacity<input type="number" min="10" value="200" required></label>
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" checked>
+          <span>We can collect food without a pickup partner.</span>
+        </label>
+        <button class="button dark full" type="submit">Send verification</button>
+        <p class="form-note" id="ngoMessage" role="status"></p>
+        <a class="button primary full" href="ngo-login.html">Login to browse food</a>
+        <a class="button dark full" href="ngo-feedback.html">Give NGO feedback</a>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer"><span>ShareBite prototype</span><span>NGO access page</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Feedback | ShareBite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header page-header">
+    <a class="brand" href="index.html" aria-label="ShareBite home"><span class="brand-mark">SB</span><span>ShareBite</span></a>
+    <button class="menu-toggle" type="button" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span>Menu</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="listings.html">Food listings</a>
+      <a href="ngo.html">NGO access</a>
+      <a href="ngo-feedback.html" aria-current="page">NGO feedback</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">For NGOs only</p>
+      <h1>NGO feedback</h1>
+      <p>Share pickup experience, food quality, and suggestions after collecting food.</p>
+    </section>
+
+    <section class="section single-form">
+      <form class="form-panel ngo-panel" id="ngoFeedbackForm" aria-labelledby="feedback-title">
+        <div class="section-heading inline">
+          <p class="eyebrow">Feedback form</p>
+          <h2 id="feedback-title">Send NGO feedback</h2>
+        </div>
+        <label>NGO name
+          <input id="feedbackNgoName" type="text" placeholder="Enter NGO name" required>
+        </label>
+        <label>Email
+          <input id="feedbackEmail" type="email" placeholder="Enter NGO email" required>
+        </label>
+        <label>Pickup rating
+          <select id="feedbackRating" required>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Good</option>
+            <option value="3">3 - Average</option>
+            <option value="2">2 - Needs improvement</option>
+            <option value="1">1 - Poor</option>
+          </select>
+        </label>
+        <label>Feedback
+          <textarea id="feedbackText" rows="5" placeholder="Write your feedback about food quality, pickup, timing, or supplier behavior." required></textarea>
+        </label>
+        <button class="button primary full" type="submit">Submit feedback</button>
+        <p class="form-note" id="feedbackMessage" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer"><span>ShareBite prototype</span><span>NGO feedback page</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

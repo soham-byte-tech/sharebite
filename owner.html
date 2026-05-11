@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Dashboard | ShareBite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header page-header">
+    <a class="brand" href="index.html" aria-label="ShareBite home"><span class="brand-mark">SB</span><span>ShareBite</span></a>
+    <button class="menu-toggle" type="button" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span>Menu</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="how.html">How it works</a>
+      <a href="listings.html">Food listings</a>
+      <a href="donate.html">Donate food</a>
+      <a href="supplier.html">Supplier approval</a>
+      <a href="owner.html" aria-current="page">Owner dashboard</a>
+      <a href="ngo.html">NGO access</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">For owner</p>
+      <h1>Owner dashboard</h1>
+      <p>See ShareBite activity and send all current data and updates to your email.</p>
+    </section>
+
+    <section class="section owner-layout" aria-labelledby="owner-email-title">
+      <form class="form-panel report-panel" id="ownerEmailForm" aria-labelledby="owner-email-title">
+        <div class="section-heading inline">
+          <p class="eyebrow">Owner email</p>
+          <h2 id="owner-email-title">Send all data to my email</h2>
+        </div>
+        <label>Your email address
+          <input id="ownerEmail" type="email" value="owner@example.com" required>
+        </label>
+        <button class="button primary full" type="submit">Email full ShareBite report</button>
+        <p class="form-note" id="ownerEmailMessage" role="status"></p>
+      </form>
+
+      <div class="owner-summary" aria-labelledby="summary-title">
+        <div class="section-heading inline">
+          <p class="eyebrow">Live summary</p>
+          <h2 id="summary-title">Owner overview</h2>
+        </div>
+        <div class="listing-grid owner-stats" id="ownerStats" aria-live="polite"></div>
+      </div>
+      <a class="button dark full" href="owner-login.html">Back to owner login</a>
+    </section>
+  </main>
+
+  <footer class="footer"><span>ShareBite prototype</span><span>Owner dashboard page</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

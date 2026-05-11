@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supplier Approval | ShareBite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header page-header">
+    <a class="brand" href="index.html" aria-label="ShareBite home"><span class="brand-mark">SB</span><span>ShareBite</span></a>
+    <button class="menu-toggle" type="button" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span>Menu</button>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="how.html">How it works</a>
+      <a href="listings.html">Food listings</a>
+      <a href="donate.html">Donate food</a>
+      <a href="supplier.html" aria-current="page">Supplier approval</a>
+      <a href="owner.html">Owner dashboard</a>
+      <a href="ngo.html">NGO access</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">For suppliers</p>
+      <h1>Supplier approval</h1>
+      <p>Approve pending food donations. After approval, an email draft opens for the NGO with pickup details.</p>
+    </section>
+
+    <section class="section" aria-labelledby="approval-title">
+      <div class="section-heading inline">
+        <p class="eyebrow">Approval queue</p>
+        <h2 id="approval-title">Pending food approvals</h2>
+      </div>
+      <p class="results-note" id="approvalMessage" role="status"></p>
+      <div class="listing-grid supplier-grid" id="supplierGrid" aria-live="polite"></div>
+      <a class="button dark" href="supplier-login.html">Back to supplier login</a>
+    </section>
+  </main>
+
+  <footer class="footer"><span>ShareBite prototype</span><span>Supplier approval page</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
